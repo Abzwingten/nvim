@@ -13,14 +13,19 @@ return require('packer').startup(function(use)
       config = function()
       require('lualine').setup()
   end, }
+
+  use "ellisonleao/gruvbox.nvim"
+
   -- Тема в стиле Rose Pine
-  use({
+  --[[ use({
     'rose-pine/neovim',
     as = 'rose-pine',
     config = function()
       vim.cmd('colorscheme rose-pine')
     end
-  })
+  }) ]]
+
+  use {'glepnir/dashboard-nvim'}
   ---------------------------------------------------------
   -- МОДУЛИ РЕДАКТОРА
   ---------------------------------------------------------
